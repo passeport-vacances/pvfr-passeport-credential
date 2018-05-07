@@ -51,13 +51,16 @@ setup(
     description="Credentials generator for the Passeport vacances Fribourg",
     long_description=long_desc,
     author="Jacques Supcik",
-    url="https://github.com/passeport-vacances/pvfr-passeport-credential/",
+    project_urls={
+        "Bug Tracker": "https://github.com/passeport-vacances/pvfr-passeport-credential/issues",
+        "Documentation": "http://pvfr-passeport-credential.readthedocs.io/en/latest/",
+        "Source Code": "https://github.com/passeport-vacances/pvfr-passeport-credential",
+    },
     packages=packages,
     package_data={},
     license="Apache 2.0",
     classifiers=[
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
