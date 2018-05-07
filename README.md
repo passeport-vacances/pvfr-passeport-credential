@@ -2,6 +2,7 @@
 
 [![PyPI](https://img.shields.io/pypi/v/pvfr-passeport-credential.svg)](https://pypi.org/project/pvfr-passeport-credential/)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pvfr-passeport-credential.svg)
+[![CircleCI](https://circleci.com/gh/passeport-vacances/pvfr-passeport-credential.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/passeport-vacances/pvfr-passeport-credential)
 [![Read the Docs (version)](https://readthedocs.org/projects/pvfr-passeport-credential/badge/?version=latest)](http://pvfr-passeport-credential.readthedocs.io/en/latest/?badge=latest)
 [![PyPI - Wheel](https://img.shields.io/pypi/wheel/pvfr-passeport-credential.svg)](https://pypi.org/project/pvfr-passeport-credential/#files)
 ![PyPI - License](https://img.shields.io/pypi/l/pvfr-passeport-credential.svg)
