@@ -51,6 +51,7 @@ setup(
     description="Credentials generator for the Passeport vacances Fribourg",
     long_description=long_desc,
     author="Jacques Supcik",
+    url="https://github.com/passeport-vacances/pvfr-passeport-credential",
     project_urls={
         "Bug Tracker": "https://github.com/passeport-vacances/pvfr-passeport-credential/issues",
         "Documentation": "http://pvfr-passeport-credential.readthedocs.io/en/latest/",
