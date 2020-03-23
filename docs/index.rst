@@ -10,11 +10,9 @@ Welcome to PVFR Passeport Credential's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   ./modules
+   pvfr.passeport_credential
 
 Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

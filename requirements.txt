@@ -1,5 +1,11 @@
+autopep8
 pycodestyle
+pylint
+pytest
 Sphinx
 sphinx-rtd-theme
+python-docs-theme
 tox
 twine
+wheel
+yapf

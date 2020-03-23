@@ -1,22 +1,26 @@
-all: lint test dist doc
+all: rst lint test dist doc
+
+rst:
+	pandoc -t rst README.md  > README.rst
 
 lint:
-	find pvfr -name "*.py" | xargs pycodestyle --ignore=E501,E402,E701
+	pylint pvfr
+	find pvfr -name "*.py" | xargs pycodestyle
 
-test:
+test: rst
 	tox
 
-dist:
+dist: rst
 	python ./setup.py bdist_wheel
 
-doc:
-	cd docs && $(MAKE) html
+doc: rst
+	$(MAKE) -C docs html
 
 clean:
 	python ./setup.py clean
-
+	$(MAKE) -C docs clean
 
 upload:
 	twine upload dist/*
 
-.PHONY: all lint test doc dist upload
+.PHONY: all rst lint test doc dist upload

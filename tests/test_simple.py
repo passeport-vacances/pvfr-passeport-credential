@@ -13,13 +13,13 @@
 # limitations under the License.
 
 import unittest
-import pvfr.passeport_credential as cred
+from pvfr.passeport_credential import Signer, SerialNumber, Password
 
 
 class SimpleTest(unittest.TestCase):
     def test(self):
-        s_key = bytearray.fromhex("c31e739fbd3acf8592b65aaa3aacbf15876c87ebf999af8c33ca1e7892f619e8")
-        p_key = bytearray.fromhex("ca1414bc18362e57e914f433c6c11439207c4953ad4b16d9bcf26d9ef5acae03")
-        c = cred.Credential(s_key, p_key)
-        self.assertEqual(c.bar_code(42), "246595760042")
-        self.assertEqual(c.serial_pwd(42), "bvuz-bfnb-ktm6")
+        s = Signer("f09d837b265d7ff95d724c7f9dcc8b51dc6a357db5630eedff48b6c1659e2181")
+        serialGen = SerialNumber(s)
+        self.assertEqual(serialGen.serial(0), "000075101802")
+        pwGen = Password(s)
+        self.assertEqual(pwGen.password(0), "yd2f-ktfb-dyru")

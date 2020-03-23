@@ -1,4 +1,4 @@
-# Copyright 2018 Jacques Supcik, Passeport vacances Fribourg
+# Copyright 2020 Jacques Supcik, Passeport vacances Fribourg
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,38 +16,28 @@
 
 """
 
-from __future__ import print_function
 import sys
+import unittest
 
-if sys.version_info < (3, 5):
-    print('pvfr-passeport-credentials requires python version >= 3.5.',
+from setuptools import setup
+
+import pvfr.passeport_credential
+
+if sys.version_info < (3, 6):
+    print('pvfr-passeport-credentials requires python version >= 3.6.0',
           file=sys.stderr)
     sys.exit(1)
 
-from setuptools import setup
-import unittest
-
-
-def my_test_suite():
-    test_loader = unittest.TestLoader()
-    test_suite = test_loader.discover('tests', pattern='test_*.py')
-    return test_suite
-
-
-packages = [
-    'pvfr.passeport_credential',
-]
-
 long_desc = """Library for generating verifiable credentials for the Passeport vacances Fribourg
 """
-
-import pvfr.passeport_credential
 version = pvfr.passeport_credential.__version__
 
 setup(
     name='pvfr-passeport-credential',
+    packages=[
+        'pvfr.passeport_credential',
+    ],
     version=version,
-    test_suite='setup.my_test_suite',
     description="Credentials generator for the Passeport vacances Fribourg",
     long_description=long_desc,
     author="Jacques Supcik",
@@ -57,7 +47,7 @@ setup(
         "Documentation": "http://pvfr-passeport-credential.readthedocs.io/en/latest/",
         "Source Code": "https://github.com/passeport-vacances/pvfr-passeport-credential",
     },
-    packages=packages,
+
     package_data={},
     license="Apache 2.0",
     classifiers=[
